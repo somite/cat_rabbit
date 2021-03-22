@@ -20,6 +20,10 @@ public class spawnManager : MonoBehaviour
     public Vector2 posMax = new Vector2(+8, +4);
     //第一次生成的數量
     public int count;
+
+    [Header("第一次生成的間隔")]
+    public float intervalfirst = 0.05f;
+
     [Header("是否需要間格生成")]
     public bool needSpawn;
     [Header("目前物件的數量")]
@@ -28,22 +32,28 @@ public class spawnManager : MonoBehaviour
     //開始事件
     private void Start()
     {
-        for (int i = 0; i < count; i++)
-        {
-            spawn();
-        }
+       
         //重複呼叫函式名稱, 開始時間, 間隔時間
-        if (needSpawn) InvokeRepeating("spawn", interval, interval);
+       InvokeRepeating("spawn", 0, intervalfirst);
     }
     //自訂函式
     //語法
     public void spawn()
     {
         currentCount++;
+        //隨機生成地點
         float x = Random.Range(posMin.x, posMax.x);
         float y = Random.Range(posMin.y, posMax.y);
 
+        //生成(物件, 座標, 角度)
         Instantiate(obj,new Vector2(x,y), Quaternion.identity);
+        //如果 目前數量 等於 第一次生成數量
+        if (currentCount==count)
+        {
+            CancelInvoke();
+            //如果 需要持續生成 就重複呼叫
+            if (needSpawn) InvokeRepeating("spawn", interval, interval);
+        }
     }
 
 
