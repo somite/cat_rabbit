@@ -117,9 +117,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   eatime: 1
-  lifetime: 5
-  eatCount: 7
+  lifetime: 3
+  eatCount: 11
   targetName: "\u9752\u86D9"
   targets: []
   targetsDistanics: []
+  countEatToDie: 23
   goodEyes: 0

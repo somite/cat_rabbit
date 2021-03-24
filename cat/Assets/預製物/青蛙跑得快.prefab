@@ -117,9 +117,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   eatime: 1
-  lifetime: 3
+  lifetime: 2
   eatCount: 2
   targetName: "\u860B\u679C"
   targets: []
   targetsDistanics: []
+  countEatToDie: 10000
   haveColor: 0

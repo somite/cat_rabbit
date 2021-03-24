@@ -137,4 +137,31 @@ public class Gamemanager : MonoBehaviour
         SceneManager.LoadScene("遊戲場景");
     }
 
+    public void UseFaulPlay()
+    {
+        appleFirst =  40;
+        appleInterval = 0.05f;
+
+        frogNoColor = 6;
+        objFrogNoColor.lifetime = 2;
+        objFrogNoColor.eatCount = 2;
+
+        frogHaveColor = 6;
+        objFrogHaveColor.lifetime = 2;
+        objFrogHaveColor.eatCount = 2;
+
+        aboiginalNoColor = 1;
+        objAboriginalBadEye.lifetime = 3;
+        objAboriginalBadEye.eatCount = 11;
+
+
+        aboiginalHaveColor = 1;
+        objAboriginalGoodEye.lifetime = 3;
+        objAboriginalGoodEye.eatCount = 11;
+
+        loadScene();
+
+    }
+
+
     }

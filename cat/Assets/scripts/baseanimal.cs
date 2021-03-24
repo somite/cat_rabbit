@@ -10,7 +10,7 @@ public class baseanimal : MonoBehaviour
     public float speed;
     [Header("吃東西的時間")]
     public float eatime;
-    [Header("生命")]
+    [Header("生命沒吃到會死")]
     public float lifetime;
     [Header("吃幾隻會生下一隻")]
     public int eatCount;
@@ -20,6 +20,12 @@ public class baseanimal : MonoBehaviour
     public GameObject[] targets;
     [Header("目標的距離")]
     public List<float> targetsDistanics;
+    [Header("吃幾隻會死亡")]
+    public int countEatToDie;
+    //統計吃幾隻
+    private int countEatTotal;
+
+
 
     private Transform target;
 
@@ -70,6 +76,7 @@ public class baseanimal : MonoBehaviour
         }
         else FindTarget();
     }
+
     private void EatTarget()
     {
         isEating = true;
@@ -78,6 +85,10 @@ public class baseanimal : MonoBehaviour
         CancelInvoke("Dead");
         Invoke("Dead", lifetime);
         Invoke("Spawn", eatime);
+
+        countEatTotal++;
+
+        if (countEatTotal == countEatToDie) Dead();
     }
 
     private void Spawn()

@@ -118,8 +118,9 @@ MonoBehaviour:
   speed: 8
   eatime: 1
   lifetime: 3
-  eatCount: 7
+  eatCount: 11
   targetName: "\u9752\u86D9"
   targets: []
   targetsDistanics: []
+  countEatToDie: 23
   goodEyes: 1
