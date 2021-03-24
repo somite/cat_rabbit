@@ -1,7 +1,7 @@
 {
 "companyName": "somite",
 "productName": "生物統計",
-"productVersion": "0.1",
+"productVersion": "0.2",
 "dataUrl": "web.data.unityweb",
 "wasmCodeUrl": "web.wasm.code.unityweb",
 "wasmFrameworkUrl": "web.wasm.framework.unityweb",

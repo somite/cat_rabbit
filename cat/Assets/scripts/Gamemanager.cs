@@ -152,12 +152,12 @@ public class Gamemanager : MonoBehaviour
 
         aboiginalNoColor = 1;
         objAboriginalBadEye.lifetime = 3;
-        objAboriginalBadEye.eatCount = 11;
+        objAboriginalBadEye.eatCount = 12;
 
 
         aboiginalHaveColor = 1;
         objAboriginalGoodEye.lifetime = 3;
-        objAboriginalGoodEye.eatCount = 11;
+        objAboriginalGoodEye.eatCount = 12;
 
         loadScene();
 
